@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entiteter
 {
-    internal class Klubba
+    public class Klubba
     {
         
         public string Klubbnamn { get; set; }

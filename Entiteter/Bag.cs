@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entiteter
 {
-    internal class Bag
+    public class Bag
     {
         public Användare Användare { get; private set; }
         internal string BagNamn { get; set; }
