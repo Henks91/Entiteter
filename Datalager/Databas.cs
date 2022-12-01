@@ -12,6 +12,7 @@ namespace Datalager
 
         private static List<Bag> bagar;
         private static List<Klubba> klubbor;
+
         private static List<Användare> användare;
 
 
@@ -37,6 +38,7 @@ namespace Datalager
                 new Användare("Danne", "Daniel", "Noun"),
                 new Användare("Fred", "Fredrik", "Linhardt")
             };
+
         }
 
         #region Bag
@@ -69,14 +71,11 @@ namespace Datalager
         #endregion Klubba
 
         #region Användare
-        public List<Användare> HämtaAnvändare(string användarnamn)
+        public List<Användare> HämtaAnvändare()
         {
             return new List<Användare>(användare);
         }
-        public Användare HämtaAnvändare()
-        {
-           return användare.Find(användare=> ())
-        }
+        
         #endregion Användare
 
 

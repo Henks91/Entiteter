@@ -17,9 +17,6 @@ namespace Datalager
         {
             return databas.HämtaAnvändare();
         }
-        public Användare HämtaAnvändare(string användarnamn)
-        {
-            return databas.HämtaAnvändare(användarnamn);
-        }
+       
     }
 }
