@@ -20,6 +20,14 @@ namespace Presentationslager
             bagRepository = new BagRepository();
             klubbaRepository = new KlubbaRepository();
         }
+        
+        
+        public Meny() 
+        {
+            Kontroller = new Kontroller();
+        }
+
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Huvudmeny");

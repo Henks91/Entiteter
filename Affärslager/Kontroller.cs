@@ -35,6 +35,9 @@ namespace Affärslager
         {
             return användareRepository.HämtaAnvändare();
         }
+       
+	
 
+	
     }
 }
