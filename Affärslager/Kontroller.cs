@@ -12,12 +12,11 @@ namespace Affärslager
         private BagRepository bagRepository = null;
         private KlubbaRepository klubbaRepository = null;
 
-        public Kontroller() 
+        public Kontroller()
         {
             användareRepository = new AnvändareRepository();
             bagRepository = new BagRepository();
-            klubbaRepository= new KlubbaRepository();
-
+            klubbaRepository = new KlubbaRepository();
         }
         public Användare SkapaAnvändare(string användarnamn, string förnamn,string efternamn)
         {

@@ -6,7 +6,7 @@ using Datalager;
 
 namespace Presentationslager
 {
-    public class Meny
+    public class Program
     {
         
         public Kontroller Kontroller { get; set; }
@@ -20,14 +20,13 @@ namespace Presentationslager
         
         static void Main(string[] args)
         {
+            Console.WriteLine("Huvudmeny");
+            Console.WriteLine("1. Lista användare");
 
-            foreach (Användare a in Kontroller.HämtaAnvändare())
+            foreach (Användare användare in Databas.Instans.HämtaAnvändare())
             {
-                Console.WriteLine(a.Förnamn);
+                
             }
-            
-
-            
         }
 
     }
