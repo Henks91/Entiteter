@@ -41,7 +41,7 @@ namespace Datalager
 
             klubbTyp = new List<KlubbTyp>()
             {
-                new KlubbTyp("Driver","Trä2","Trä3","Trä4","Hybrid2","Hybrid3","Hybrid4",)
+                new KlubbTyp("Driver","Trä2","Trä3","Trä4","Hybrid2","Hybrid3","Hybrid4","")
             };
             
                 
