@@ -9,7 +9,7 @@ namespace Presentationslager
     public class Program
     {
         
-        public Kontroller Kontroller { get; set; }
+        public AnvändarKontroller AnvändarKontroller { get; set; }
         
         
         public Meny() 
