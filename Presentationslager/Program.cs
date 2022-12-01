@@ -20,12 +20,6 @@ namespace Presentationslager
             bagRepository = new BagRepository();
             klubbaRepository = new KlubbaRepository();
         }
-        
-        
-        public Meny() 
-        {
-            Kontroller = new Kontroller();
-        }
 
         
         static void Main(string[] args)
@@ -35,7 +29,9 @@ namespace Presentationslager
 
             foreach (Användare användare in Databas.Instans.HämtaAnvändare())
             {
+                Console.WriteLine("förnamn: ",användare.Förnamn + "efternamn:",användare.Efternamn + "alias: ",användare.Användarnamn);
                 
+
             }
         }
 
