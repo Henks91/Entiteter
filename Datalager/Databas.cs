@@ -12,6 +12,7 @@ namespace Datalager
 
         private static List<Bag> bagar;
         private static List<Klubba> klubbor;
+        private static List<KlubbTyp> klubbTyp;
         private static List<Användare> användare;
 
 
@@ -37,7 +38,17 @@ namespace Datalager
                 new Användare("Danne", "Daniel", "Noun"),
                 new Användare("Fred", "Fredrik", "Linhardt")
             };
+
+            klubbTyp = new List<KlubbTyp>()
+            {
+                new KlubbTyp("Driver","Trä2","Trä3","Trä4","Hybrid2","Hybrid3","Hybrid4",)
+            };
+            
+                
+           
+
         }
+
 
         #region Bag
         public List<Bag> HämtaBag()
@@ -71,7 +82,7 @@ namespace Datalager
         #region Användare
         public List<Användare> HämtaAnvändare()
         {
-            return Databas.användare;
+            return new List<Användare> (användare);
         }
         #endregion Användare
 
