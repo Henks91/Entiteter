@@ -19,5 +19,6 @@ namespace Affärslager
             bag.LäggTillKlubba(klubbnamn, maxL, minL);
             return bag;
         }
+        public 
     }
 }
