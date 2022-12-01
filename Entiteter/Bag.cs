@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Entiteter
@@ -7,10 +8,10 @@ namespace Entiteter
     public class Bag
     {
         public Användare Användare { get; private set; }
-        internal string BagNamn { get; set; }
-        internal int BagId { get; private set; }
+        public string BagNamn { get; set; }
+        public int BagId { get; private set; }
 
-        internal List<Klubba> Klubbor { get; set; }
+        public List<Klubba> Klubbor { get; set; }
         public Bag(Användare användare, string bagNamn)
         {
             Användare = användare;
