@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using Entiteter;
 using Affärslager;
-
+using Datalager;
 
 namespace Presentationslager
 {
-    internal class Program
+    public class Meny
     {
+        
         public Kontroller Kontroller { get; set; }
+        
+        
+        public Meny() 
+        {
+            Kontroller = new Kontroller();
+        }
+
+        
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Tja karl");
+            foreach (Användare a in Kontroller.HämtaAnvändare())
+            {
+                Console.WriteLine(a.Förnamn);
+            }
+            Kontroller.LäggTillKlubba()
+
+            
         }
 
     }

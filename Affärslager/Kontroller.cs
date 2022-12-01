@@ -11,6 +11,14 @@ namespace Affärslager
         private AnvändareRepository användareRepository = null;
         private BagRepository bagRepository = null;
         private KlubbaRepository klubbaRepository = null;
+
+        public Kontroller() 
+        {
+            användareRepository = new AnvändareRepository();
+            bagRepository = new BagRepository();
+            klubbaRepository= new KlubbaRepository();
+
+        }
         public Användare SkapaAnvändare(string användarnamn, string förnamn,string efternamn)
         {
             return new Användare(användarnamn, förnamn, efternamn);
@@ -28,6 +36,9 @@ namespace Affärslager
         {
             return användareRepository.HämtaAnvändare();
         }
+       
+	
 
+	
     }
 }

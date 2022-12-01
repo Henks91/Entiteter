@@ -4,9 +4,9 @@ namespace Entiteter
 {
     public class Användare
     {
-        internal string Användarnamn { get; set; }
-        internal string Förnamn { get; set; }
-        internal string Efternamn { get; set; }
+        public string Användarnamn { get; set; }
+        public string Förnamn { get; set; }
+        public string Efternamn { get; set; }
         public Användare(string användarnamn, string förnamn, string efternamn)
         {
             Användarnamn = användarnamn;
