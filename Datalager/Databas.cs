@@ -71,7 +71,7 @@ namespace Datalager
         #region Användare
         public List<Användare> HämtaAnvändare()
         {
-            return new List<Användare>(användare);
+            return Databas.användare;
         }
         #endregion Användare
 

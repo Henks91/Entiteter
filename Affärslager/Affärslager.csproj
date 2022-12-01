@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Entiteter\Entiteter.csproj" />
+    <ProjectReference Include="..\Datalager\Datalager.csproj" />
   </ItemGroup>
 
 </Project>

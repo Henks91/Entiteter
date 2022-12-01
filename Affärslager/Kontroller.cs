@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using Entiteter;
+using Datalager;
 
 namespace Affärslager
 {
     public class Kontroller
     {
+        private AnvändareRepository användareRepository = null;
+        private BagRepository bagRepository = null;
+        private KlubbaRepository klubbaRepository = null;
         public Användare SkapaAnvändare(string användarnamn, string förnamn,string efternamn)
         {
             return new Användare(användarnamn, förnamn, efternamn);
@@ -19,6 +24,10 @@ namespace Affärslager
             bag.LäggTillKlubba(klubbnamn, maxL, minL);
             return bag;
         }
-        public 
+        public List<Användare> HämtaAnvändare()
+        {
+            return användareRepository.HämtaAnvändare();
+        }
+
     }
 }
