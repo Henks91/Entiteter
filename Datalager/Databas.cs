@@ -27,5 +27,34 @@ namespace Datalager
                 return instans;
             }
         }
+
+        #region Bag
+        public List<Bag> HämtaBag()
+        {
+            return new List<Bag>(bag);
+        }
+
+        public Bag SkapaBag(Bag bag)
+        {
+
+        }
+
+        #endregion Bag
+
+        #region Klubba
+        public List<Klubba> HämtaKlubba()
+        {
+            return new List<Klubba>(klubba);
+        }
+        #endregion Klubba
+
+        #region Användare
+        public List<Användare> HämtaAnvändare()
+        {
+            return new List<Användare>(användare);
+        }
+        #endregion Användare
+
+
     }
 }

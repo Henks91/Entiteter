@@ -6,5 +6,6 @@ namespace Datalager
 {
     public class KlubbaRepository
     {
+
     }
 }
