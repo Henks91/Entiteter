@@ -10,8 +10,8 @@ namespace Datalager
         private static Databas instans = null;
         private static object lockToken = new object();
 
-        private static List<Bag> bag;
-        private static List<Klubba> klubba;
+        private static List<Bag> bagar;
+        private static List<Klubba> klubbor;
         private static List<Användare> användare;
 
 
@@ -28,15 +28,28 @@ namespace Datalager
             }
         }
 
+        static Databas ()
+        {
+            användare = new List<Användare>()
+            {
+                new Användare("Bunkern", "Henric","Johansson"),
+                new Användare("NCHW", "Carl", "Wånsander"),
+                new Användare("Danne", "Daniel", "Noun"),
+                new Användare("Fred", "Fredrik", "Linhardt")
+            };
+        }
+
         #region Bag
         public List<Bag> HämtaBag()
         {
-            return new List<Bag>(bag);
+            return new List<Bag>(bagar);
         }
 
-        public Bag SkapaBag(Bag bag)
+        public Bag SkapaBag(Användare användare, string bagNamn)
         {
-
+            Bag bag = new Bag(användare, bagNamn);
+            bagar.Add(bag);
+            return bag;
         }
 
         #endregion Bag
@@ -44,7 +57,14 @@ namespace Datalager
         #region Klubba
         public List<Klubba> HämtaKlubba()
         {
-            return new List<Klubba>(klubba);
+            return new List<Klubba>(klubbor);
+        }
+
+        public Klubba LäggtillKlubba(string klubbnamn, int maxL, int minL)
+        {
+            Klubba klubba = new Klubba(klubbnamn, maxL, minL);
+            klubbor.Add(klubba);
+            return klubba;
         }
         #endregion Klubba
 
