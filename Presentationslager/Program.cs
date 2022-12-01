@@ -19,8 +19,8 @@ namespace Presentationslager
             bagKontroller = new BagKontroller();
             klubbKontroller = new KlubbKontroller();
         }
-             
-        
+
+
         static void Main(string[] args)
         {
             var a = new Program();
@@ -56,6 +56,11 @@ namespace Presentationslager
         static void ListaAnvändare()
         {
             var a = new Program();
+
+
+        
+
+
             foreach (Användare användare in a.användarKontroller.HämtaAnvändare())
             {
                 Console.WriteLine($"namn: {användare.Användarnamn}\tförnamn: {användare.Förnamn}\tefternamn: {användare.Efternamn}");

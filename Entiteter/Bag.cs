@@ -7,14 +7,14 @@ namespace Entiteter
 {
     public class Bag
     {
-        public Användare Användare { get; private set; }
+        
         public string BagNamn { get; set; }
         public int BagId { get; private set; }
 
         public List<Klubba> Klubbor { get; set; }
-        public Bag(Användare användare, string bagNamn)
+        public Bag(string bagNamn)
         {
-            Användare = användare;
+            
             BagNamn = bagNamn;
             Klubbor = new List<Klubba>();
         }
