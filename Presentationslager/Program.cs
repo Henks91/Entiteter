@@ -9,7 +9,7 @@ namespace Presentationslager
 {
     public class Program
     {
-        public AnvändarKontroller användarKontroller { get; set; }
+        private AnvändarKontroller användarKontroller { get; set; }
         public BagKontroller bagKontroller { get; set; }
         public KlubbKontroller klubbKontroller { get; set; }
 
@@ -41,6 +41,10 @@ namespace Presentationslager
         
 
 
+            foreach (Användare användare in a.användarKontroller.HämtaAnvändare())
+            {
+              //  Console.WriteLine($"namn:{anv.Användarnamn},\tförnamn; {anv.Förnamn}, \tefternamn: {anv.Efternamn}");
+                Console.WriteLine(anv);
 
 
 
