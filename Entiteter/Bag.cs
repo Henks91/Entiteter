@@ -10,11 +10,18 @@ namespace Entiteter
         internal string BagNamn { get; set; }
         internal int BagId { get; private set; }
 
-        internal List<Klubbor> Klubbor { get; set; }
-        public Bag(Användare användare)
+        internal List<Klubba> Klubbor { get; set; }
+        public Bag(Användare användare, string bagNamn)
         {
             Användare = användare;
-            Klubbor = new List<Klubbor>();
+            BagNamn = bagNamn;
+            Klubbor = new List<Klubba>();
+        }
+        public void LäggTillKlubba(string klubbnamn, int maxL, int minL)
+        {
+            Klubba klubba = new Klubba(klubbnamn, maxL, minL);
+            Klubbor.Add(klubba);
+
         }
     }
 }
