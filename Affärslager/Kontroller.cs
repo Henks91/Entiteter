@@ -8,7 +8,7 @@ namespace Affärslager
     {
         public Användare SkapaAnvändare(string användarnamn, string förnamn,string efternamn)
         {
-            Användare
+            return new Användare(användarnamn, förnamn, efternamn);
         }
         public Bag SkapaBag(Användare användare, string bagNman)
         {
