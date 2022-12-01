@@ -8,7 +8,7 @@ namespace Presentationslager
 {
     public class Program
     {
-        public AnvändarKontroller användarKontroller { get; set; }
+        private AnvändarKontroller användarKontroller { get; set; }
         public BagKontroller bagKontroller { get; set; }
         public KlubbKontroller klubbKontroller { get; set; }
 
@@ -18,17 +18,19 @@ namespace Presentationslager
             bagKontroller = new BagKontroller();
             klubbKontroller = new KlubbKontroller();
         }
-        
+
+        public static Program kontext = null;
         
         static void Main(string[] args)
         {
+
             Console.WriteLine("Huvudmeny");
             Console.WriteLine("1. Lista användare");
-
-            foreach (Användare användare in Databas.Instans.HämtaAnvändare())
+            //List<Användare> användare = användarKontroller.HämtaAnvändare();
+            foreach (object anv in kontext.användarKontroller.HämtaAnvändare())
             {
-                Console.WriteLine($"namn:{användare.Användarnamn},\tförnamn; {användare.Förnamn}, \tefternamn: {användare.Efternamn}");
-                Console.WriteLine();
+              //  Console.WriteLine($"namn:{anv.Användarnamn},\tförnamn; {anv.Förnamn}, \tefternamn: {anv.Efternamn}");
+                Console.WriteLine(anv);
 
             }
         }

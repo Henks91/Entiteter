@@ -69,9 +69,13 @@ namespace Datalager
         #endregion Klubba
 
         #region Användare
-        public List<Användare> HämtaAnvändare()
+        public List<Användare> HämtaAnvändare(string användarnamn)
         {
-            return Databas.användare;
+            return new List<Användare>(användare);
+        }
+        public Användare HämtaAnvändare()
+        {
+           return användare.Find(användare=> ())
         }
         #endregion Användare
 
