@@ -18,9 +18,14 @@ namespace Datalager
             return databas.HämtaBag();
         }
 
-        public Bag SkapaBag(Användare användare, string bagNamn)
+        public Bag SkapaBag(string bagNamn)
         {
-            return databas.SkapaBag(användare, bagNamn);
+            return databas.SkapaBag(bagNamn);
+        }
+
+        public Bag SlutförBag(Bag bag)
+        {
+            return databas.SlutförBag(bag);
         }
     }
 }

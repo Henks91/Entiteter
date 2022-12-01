@@ -9,7 +9,6 @@ namespace Entiteter
     {
         
         public string BagNamn { get; set; }
-        public int BagId { get; private set; }
 
         public List<Klubba> Klubbor { get; set; }
         public Bag(string bagNamn)

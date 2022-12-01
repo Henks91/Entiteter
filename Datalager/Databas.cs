@@ -39,10 +39,17 @@ namespace Datalager
                 new Användare("Fred", "Fredrik", "Linhardt")
             };
 
-            klubbTyp = new List<KlubbTyp>()
+            bagar = new List<Bag>();
+
+            klubbor = new List<Klubba>();
+
+            klubbTyp = new List<KlubbTyp>();
+
+
+            /*klubbTyp = new List<KlubbTyp>()
             {
                 new KlubbTyp("Driver","Trä2","Trä3","Trä4","Hybrid2","Hybrid3","Hybrid4",)
-            };
+            };*/
             
                 
            
@@ -56,9 +63,14 @@ namespace Datalager
             return new List<Bag>(bagar);
         }
 
-        public Bag SkapaBag(Användare användare, string bagNamn)
+        public Bag SkapaBag(string bagNamn)
         {
-            Bag bag = new Bag(användare, bagNamn);
+            Bag bag = new Bag(bagNamn);
+            bagar.Add(bag);
+            return bag;
+        }
+        public Bag SlutförBag(Bag bag)
+        {
             bagar.Add(bag);
             return bag;
         }
@@ -83,12 +95,7 @@ namespace Datalager
         public List<Användare> HämtaAnvändare()
         {
             return new List<Användare>(användare);
-        }
-        public Användare HämtaAnvändare()
-        {
-           return användare.Find(användare=> ())
-            return new List<Användare> (användare);
-        }
+        }      
         #endregion Användare
 
 

@@ -13,9 +13,19 @@ namespace Affärslager
         {
             bagRepository = new BagRepository();
         }
-        public Bag SkapaBag(Användare användare, string bagNman)
+        public Bag SkapaBag(string bagNman)
         {
-            return new Bag(användare, bagNman);
+            return new Bag(bagNman);
+        }
+        
+        public Bag LäggTillKlubba(Bag bag, string klubbnamn, int maxL, int minL)
+        {
+            bag.LäggTillKlubba(klubbnamn, maxL, minL);           
+            return bag;
+        }
+        public Bag SlutförBag(Bag bag)
+        {
+            return bagRepository.SlutförBag(bag);
         }
     }
 }

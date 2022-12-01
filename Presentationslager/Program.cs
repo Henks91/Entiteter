@@ -57,15 +57,57 @@ namespace Presentationslager
         {
             var a = new Program();
 
-
-        
-
-
             foreach (Användare användare in a.användarKontroller.HämtaAnvändare())
             {
                 Console.WriteLine($"namn: {användare.Användarnamn}\tförnamn: {användare.Förnamn}\tefternamn: {användare.Efternamn}");
             }    
 
+        }
+        static void SkapaBag()
+        {
+            var a = new Program();
+            Console.WriteLine("Namge din bag: ");
+            string namn = Console.ReadLine();
+            a.bagKontroller.SkapaBag(namn);
+            LäggTillKlubba();
+        }
+
+        static void LäggTillKlubba()
+        {
+            var a = new Program();
+            string Tklubba = String.Empty;
+            int val;
+            Console.WriteLine("Hur många klubbor vill du lägga till? ");
+            int.TryParse(Console.ReadLine(), out val);
+
+            for (int i = 0; i < val; i++)
+            {
+                Console.WriteLine("Namge klubban: ");
+                string namn = Console.ReadLine();
+                Console.WriteLine("Ange maxlängd du slår: ");
+                int maxl;
+                int.TryParse(Console.ReadLine(), out maxl);
+                Console.WriteLine("Ange minimumlängden du slår: ");
+                int minl;
+                int.TryParse(Console.ReadLine(), out minl);
+                a.bagKontroller.LäggTillKlubba(a.bagKontroller.SkapaBag(namn), namn, maxl, minl);
+            }
+            /*SlutförBag();
+            foreach (Klubba klubba in )
+            {
+
+            }*/
+           
+
+            /*do
+            {
+                Console.WriteLine("Klubbnamn (blank rad = klar) ");
+                Tklubba = Console.ReadLine();
+                if (Tklubba == String.Empty)
+                    break; 
+
+                
+            } while (true);*/
         }
 }
 }
