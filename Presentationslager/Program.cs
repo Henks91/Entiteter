@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Entiteter;
 using Affärslager;
 using Datalager;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Presentationslager
 {
@@ -18,21 +19,22 @@ namespace Presentationslager
             bagKontroller = new BagKontroller();
             klubbKontroller = new KlubbKontroller();
         }
-
-        public static Program kontext = null;
+             
         
         static void Main(string[] args)
         {
+            var a = new Program();
 
             Console.WriteLine("Huvudmeny");
             Console.WriteLine("1. Lista användare");
-            //List<Användare> användare = användarKontroller.HämtaAnvändare();
-            foreach (object anv in kontext.användarKontroller.HämtaAnvändare())
+
+            foreach (Användare användare in a.användarKontroller.HämtaAnvändare())
             {
               //  Console.WriteLine($"namn:{anv.Användarnamn},\tförnamn; {anv.Förnamn}, \tefternamn: {anv.Efternamn}");
                 Console.WriteLine(anv);
 
             }
+            
         }
 
     }
