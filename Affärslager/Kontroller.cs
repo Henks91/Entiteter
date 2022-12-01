@@ -6,6 +6,10 @@ namespace Affärslager
 {
     public class Kontroller
     {
+        public Användare SkapaAnvändare(string användarnamn, string förnamn,string efternamn)
+        {
+            Användare
+        }
         public Bag SkapaBag(Användare användare, string bagNman)
         {
             return new Bag(användare, bagNman);
