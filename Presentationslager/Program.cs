@@ -8,15 +8,19 @@ namespace Presentationslager
 {
     public class Program
     {
-        
-        public AnvändarKontroller AnvändarKontroller { get; set; }
-        
-        
-        public Meny() 
-        {
-            Kontroller = new Kontroller();
-        }
+        public Kontroller kontroller { get; set; }
+        public AnvändareRepository användareRepository { get; set; }
+        public BagRepository bagRepository { get; set; }
+        public KlubbaRepository klubbaRepository { get; set; }
 
+        public Program()
+        {
+            kontroller = new Kontroller();
+            användareRepository = new AnvändareRepository();
+            bagRepository = new BagRepository();
+            klubbaRepository = new KlubbaRepository();
+        }
+        
         
         static void Main(string[] args)
         {
@@ -25,7 +29,9 @@ namespace Presentationslager
 
             foreach (Användare användare in Databas.Instans.HämtaAnvändare())
             {
-                
+                Console.WriteLine($"namn:{användare.Användarnamn},\tförnamn; {användare.Förnamn}, \tefternamn: {användare.Efternamn}");
+                Console.WriteLine();
+
             }
         }
 
