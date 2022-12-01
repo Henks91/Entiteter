@@ -80,7 +80,7 @@ namespace Datalager
         #endregion Klubba
 
         #region Användare
-        public List<Användare> HämtaAnvändare(string användarnamn)
+        public List<Användare> HämtaAnvändare()
         {
             return new List<Användare>(användare);
         }

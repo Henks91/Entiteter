@@ -27,15 +27,35 @@ namespace Presentationslager
 
             Console.WriteLine("Huvudmeny");
             Console.WriteLine("1. Lista användare");
-            Console.WriteLine("2. Skapa användare");
-            Console.WriteLine("3. Skapa bag");
-
-            
-
+            Console.WriteLine();
+            Console.WriteLine("2. Skapa en bag");
+            Console.WriteLine();
+            Console.WriteLine("Lägg till klubbor till din bag");
+            Console.WriteLine();
+            Console.WriteLine("3. Avsluta program");
+            int val;
+            int.TryParse(Console.ReadLine(), out val);
+             
+            switch(val)
+            {
+                case 1:
+                    ListaAnvändare();
+                    break;
+                case 2:
+                    SkapaBag();
+                    break;
+                case 3:
+                    LäggTillKlubba();
+                    break;
+                case 4:
+                    Environment.Exit(0);
+                    break;      
+            }
         }
 
-
-
+        static void ListaAnvändare()
+        {
+            var a = new Program();
 
 
         
@@ -43,28 +63,9 @@ namespace Presentationslager
 
             foreach (Användare användare in a.användarKontroller.HämtaAnvändare())
             {
-              //  Console.WriteLine($"namn:{anv.Användarnamn},\tförnamn; {anv.Förnamn}, \tefternamn: {anv.Efternamn}");
-                Console.WriteLine(anv);
+                Console.WriteLine($"namn: {användare.Användarnamn}\tförnamn: {användare.Förnamn}\tefternamn: {användare.Efternamn}");
+            }    
 
-
-
-            static void ListaAnvändare()
-            {
-                var a = new Program();
-                foreach (Användare användare in a.användarKontroller.HämtaAnvändare())
-                {
-                    Console.WriteLine($"namn:{användare.Användarnamn},\tförnamn; {användare.Förnamn}, \tefternamn: {användare.Efternamn}");
-                    Console.WriteLine();
-
-                }
-            }
-            static void AdderaKlubba()
-            {
-
-            }
-            
-            
         }
-
-    }
+}
 }
