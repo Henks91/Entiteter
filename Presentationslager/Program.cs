@@ -20,7 +20,7 @@ namespace Presentationslager
             bagRepository = new BagRepository();
             klubbaRepository = new KlubbaRepository();
         }
-
+        
         
         static void Main(string[] args)
         {
