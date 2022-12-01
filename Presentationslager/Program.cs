@@ -8,17 +8,15 @@ namespace Presentationslager
 {
     public class Program
     {
-        public Kontroller kontroller { get; set; }
-        public AnvändareRepository användareRepository { get; set; }
-        public BagRepository bagRepository { get; set; }
-        public KlubbaRepository klubbaRepository { get; set; }
+        public AnvändarKontroller användarKontroller { get; set; }
+        public BagKontroller bagKontroller { get; set; }
+        public KlubbKontroller klubbKontroller { get; set; }
 
         public Program()
         {
-            kontroller = new Kontroller();
-            användareRepository = new AnvändareRepository();
-            bagRepository = new BagRepository();
-            klubbaRepository = new KlubbaRepository();
+            användarKontroller = new AnvändarKontroller();
+            bagKontroller = new BagKontroller();
+            klubbKontroller = new KlubbKontroller();
         }
         
         
