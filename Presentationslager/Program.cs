@@ -25,7 +25,7 @@ namespace Presentationslager
             {
                 Console.WriteLine(a.Förnamn);
             }
-            Kontroller.LäggTillKlubba()
+            
 
             
         }
