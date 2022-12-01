@@ -60,7 +60,7 @@ namespace Datalager
             return new List<Klubba>(klubbor);
         }
 
-        public Klubba LäggtillKlubba(string klubbnamn, int maxL, int minL)
+        public Klubba LäggTillKlubba(string klubbnamn, int maxL, int minL)
         {
             Klubba klubba = new Klubba(klubbnamn, maxL, minL);
             klubbor.Add(klubba);
